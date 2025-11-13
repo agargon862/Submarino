@@ -9,6 +9,7 @@ class Submarino {
         this.y = Math.floor(Math.random() * size);
     }
 
+    // Para moverse aleatoriamente segun el array de vecinos que se le pasa
     mover(vecinos) {
         const vecino =  vecinos[Math.floor(Math.random() * vecinos.length)];
         this.x = vecino.x;

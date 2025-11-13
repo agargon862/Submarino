@@ -8,6 +8,7 @@ export const UI = {
     template: null,
     tablero: null,
   },
+  // Inicializar todas las variables
   init: (domControl, game) => {
     UI.control.board = document.getElementById(domControl.board);
     UI.control.status = document.getElementById(domControl.status);
@@ -15,6 +16,7 @@ export const UI = {
     UI.control.tablero = new Tablero();
     UI.game = game;
   },
+  // Aqui la logica de disparar cuando le des a una casilla especifica
   setEvent: (domControl) => {
     const tabla = document.getElementById(domControl.board);
 
@@ -31,9 +33,11 @@ export const UI = {
     UI.game = game;
     UI.control.status.textContent = "Juego iniciado";
   },
+  // Para cambiar el texto
   changeStatus(newStatus) {
     UI.control.status.textContent = newStatus;
   },
+  // Esto crea lo que vamos a tener en el UI, la tabla con sus casillas
   creaGridTemplate4(total, plantilla, tabla, tablero) {
     tabla.style.gridTemplateColumns = `repeat(${total}, 1fr)`;
     Array.from({ length: total * total }, (_, i) => {

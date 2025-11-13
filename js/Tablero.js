@@ -12,9 +12,13 @@ class Tablero {
   init(config) {
     this.size = config;
 
+
+    // Creamos una matriz bidimensional del tamaño indicado
+    // Cada posición será una nueva celda con sus coordenadas (i, j)
     let malla = Array.from({ length: this.size }, (v, i) =>
       Array.from({ length: this.size }, (v, j) => new Celda(i, j))
     );
+     // Recorremos cada celda del tablero y le asignamos sus vecinos
     malla.forEach((item, i) =>
       item.forEach((celda, j) => {
         if (i > 0) celda.nuevoVecino(Vecinos.ARRIBA, malla[i - 1][j]);

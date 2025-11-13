@@ -11,3 +11,6 @@ Y no se si habia otra forma pero he hecho que cada vez que pulses a una casilla,
 es un if basico de si submarino.x y submarino.y es igual a los parametros que le paso cada vez que se le da a una casilla que ponga que he acertado y si no, que busque la celda en la que estoy, y vea los vecinos que tiene con los valores que sean distintos de null , y se mueva aletoriamente a uno de esos.
 
 En definitiva el programa va, pero sigue costandome implementar la logica separada del UI.
+
+
+# Alejandro Garcia Gonzalez

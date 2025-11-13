@@ -1,6 +1,6 @@
 # Submarino
 
-##Problemas que he tenido
+## Problemas que he tenido
 
 En este proyecto al principio me ha costado mucho lo que es integrar la UI con la logica de la aplicacion, aun teniendo la plantilla.
 He intentado hacer el rastro pero sinceramente he desistido porque no he sabido aplicar mi logica al codigo, empece pensando en un Array con 4 numeros y intente que cada vez que le diera click a una casilla y fallara buscara donde esta la celda del anterior y le cambiara el text.content, pero se me ha hecho muy tedioso y no lo he logrado.

@@ -26,7 +26,7 @@ export const UI = {
       });
     });
   },
-
+  
   start(game) {
     UI.game = game;
     UI.control.status.textContent = "Juego iniciado";

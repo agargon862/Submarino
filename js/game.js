@@ -5,11 +5,12 @@ import { GameSubmarine } from "./GameSubmarine.js";
 UI.init({
     board: 'gameBoard',
     status: 'gameStatus',
-    template: 'casilla-template2'
+    template: 'casilla-template2', 
+    cantidad: 8
 });
 
 
-const gameInstance = new GameSubmarine(UI,8 );
+const gameInstance = new GameSubmarine(UI,8);
 
 
 UI.creaGridTemplate4(8, UI.control.template, UI.control.board, UI.control.tablero);
@@ -19,5 +20,19 @@ UI.setEvent({
     board: 'gameBoard',
     shot: (fila, columna) => gameInstance.shot(fila, columna)
 });
+
+document.getElementById('resetButton').addEventListener('click', () => {
+    UI.control.board.innerHTML = '';
+    
+    const newGame = new GameSubmarine(UI, 8);
+    
+    UI.creaGridTemplate4(8, UI.control.template, UI.control.board, UI.control.tablero);
+    
+    UI.setEvent({
+        board: 'gameBoard',
+        shot: (fila, columna) => newGame.shot(fila, columna)
+    });
+});
+
 
 
